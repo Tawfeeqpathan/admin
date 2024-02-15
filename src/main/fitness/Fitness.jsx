@@ -7,6 +7,8 @@ import gymimg from "../../../images/gym.png"
 import supimg from "../../../images/supplement.png"
 import deitimg from "../../../images/diets.png"
 import goalimg from "../../../images/goal.png"
+import HomeProduct from '../components/HomeProduct';
+import Category from '../category/Category';
 export default function Fitness() {
     const data = [
         {

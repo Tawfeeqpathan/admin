@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import Ionicons from 'react-native-vector-icons/dist/Ionicons';
 import Entypo from 'react-native-vector-icons/dist/Entypo';
-import {Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import {FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import Carousel from './components/Carousel';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import logo from "../../images/logo.png"
@@ -12,12 +12,49 @@ import Food from './food/Food';
 import Services from './services/Services';
 import Fitness from './fitness/Fitness';
 import Travel from './travel/Travel';
-import Anitext from './components/Anitext';
+import {PhoneBestProduct,ClothesBestProuct} from "./components/HomeProduct"
 export default function Home() {
-
+  const data=[
+    {
+    id:1,
+    title:"I phone",
+    price:9999
+  },
+  {
+    id:2,
+    title:"I phone",
+    price:9999
+  },
+  {
+    id:3,
+    title:"I phone",
+    price:9999
+  },
+  {
+    id:4,
+    title:"I phone",
+    price:9999
+  },
+  {
+    id:5,
+    title:"I phone",
+    price:9999
+  },
+  {
+    id:6,
+    title:"I phone",
+    price:9999
+  },
+  {
+    id:7,
+    title:"I phone",
+    price:9999
+  }
+]
   return (
-    <SafeAreaView style={{backgroundColor:'black'}}>
-      <ScrollView>
+    <SafeAreaView style={{backgroundColor:'black',height:'auto'}}>
+     
+     <ScrollView style={{display:'flex'}}>
         <View style={[mystyle.box,{flexDirection:'row',margin:20}]}>
        <View>
         <Image source={logo} style={{width:50,height:50}} resizeMode="contain"  />
@@ -58,6 +95,10 @@ export default function Home() {
       
         <View>
         <Fitness/>
+        </View>
+        <View>
+        <PhoneBestProduct/>
+        <ClothesBestProuct/>
         </View>
       </ScrollView>
     </SafeAreaView>

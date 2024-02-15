@@ -1,8 +1,11 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, View } from 'react-native'
+import HomeProduct from '../components/HomeProduct'
 
 export default function Category() {
   return (
-    <Text>category</Text>
+    <View style={{backgroundColor:'black'}}>
+      <HomeProduct/>
+    </View>
   )
 }

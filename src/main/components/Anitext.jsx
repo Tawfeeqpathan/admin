@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react"
 import { Text, View } from "react-native";
-
-
-
 export default function Anitext() {
   const names = [
     'Search anything..', 'Cab', 'eletronics'
@@ -24,8 +21,8 @@ export default function Anitext() {
   }, [currentName])
 
   return (
-  <View>
-    <Text style={{color:"black"}}>{currentName}</Text>
-  </View>
+    <View>
+      <Text style={{ color: "black" }}>{currentName}</Text>
+    </View>
   )
 }

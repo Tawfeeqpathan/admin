@@ -2,37 +2,32 @@ import React from 'react'
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/dist/Ionicons';
-import fruitsimg from "../../../images/fruits.png"
-import vegesimg from "../../../images/vegetables.png"
-import dairyimg from "../../../images/Dairy.png"
-import proteinimg from "../../../images/Protein.png"
-import grainimg from "../../../images/Grains.png"
+import birimg from "../../../images/biryani.png"
+import burimg from "../../../images/burger.png"
+import chiimg from "../../../images/chinese.png"
+import pizimg from "../../../images/pizza.png"
+
 export default function Food() {
     const data = [
         {
             id: 1,
-            img:fruitsimg ,
-            title: "Fruits"
+            img:pizimg,
+            title:"Pizza"
         },
         {
             id: 2,
-            img:vegesimg,
-            title: "Vege"
+            img:burimg,
+            title:"Burger"
         },
         {
             id: 3,
-            img: grainimg,
-            title: "Grains"
+            img: chiimg,
+            title:"chinese"
         },
         {
             id: 4,
-            img: proteinimg,
-            title: "Protein"
-        },
-        {
-            id: 5,
-            img: dairyimg,
-            title: "Dairy"
+            img: birimg,
+            title:"Biryani"
         },
     ]
     return (
