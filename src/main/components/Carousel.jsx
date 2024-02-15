@@ -49,7 +49,7 @@ const styles = {
     fontWeight: 'bold',
   },
   dot: {
-    backgroundColor: 'rgba(0,0,0,.2)',
+    backgroundColor: 'black',
     width: 8,
     height: 8,
     borderRadius: 4,
