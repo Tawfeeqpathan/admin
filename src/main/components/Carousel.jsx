@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 import Swiper from 'react-native-swiper';
-import img1 from "../../../images/img1.jpg"
-import img2 from "../../../images/img2.png"
-import img3 from "../../../images/img3.jpg"
+import img1 from "../../../images/a1.png"
+import img2 from "../../../images/a2.png"
+import img3 from "../../../images/a3.png"
 const Carousel = () => {
     const cData = [
         {
@@ -12,7 +12,7 @@ const Carousel = () => {
         },
         {
             id: 2,
-            image: img3    
+            image: img2   
           },
         {
             id: 3,

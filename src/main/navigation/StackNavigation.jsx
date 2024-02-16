@@ -11,6 +11,7 @@ import Wallet from '../wallet/Wallet';
 import Home from '../Home';
 import { CategoryIcon, CategoryOutline } from './CategoryIcon';
 import Dashboard from '../dashboard/Dashboard';
+import Offer from '../offer/Offer';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
@@ -29,6 +30,17 @@ export default function StackNavigation() {
                         headerShown: false,
                         tabBarIcon: ({ focused }) => focused ? (<IonIcon name="home" size={35} color="#fa8200" />)
                             : (<IonIcon name="home-outline" size={35} color="#fff" />)
+                    }}
+                />
+                  <Tab.Screen
+                    name='offer'
+                    component={Offer}
+                    options={{
+                        tabBarLabel: "Offer",
+                        tabBarLabelStyle: {  fontSize: 13, },
+                        headerShown: false,
+                        tabBarIcon: ({ focused }) => focused ? (<IonIcon name="pricetags-sharp" size={35} color="#fa8200" />)
+                            : (<IonIcon name="pricetags-outline" size={35} color="#fff" />)
                     }}
                 />
                 <Tab.Screen
@@ -67,8 +79,9 @@ export default function StackNavigation() {
     return (
         <NavigationContainer >
             <Stack.Navigator>
+            <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
                 <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }}  />
-                <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
+              
                 <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
                 
             </Stack.Navigator>

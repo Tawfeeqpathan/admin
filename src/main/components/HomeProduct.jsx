@@ -3,8 +3,8 @@ import { StyleSheet, View, Text, FlatList, ScrollView, TouchableOpacity, Image }
 
 import { SafeAreaView } from 'react-native-safe-area-context'
 import mainimg from "../../../images/sumsung.png";
-import p1img from "../../../images/p1.jpg";
-import p2img from "../../../images/p2.jpg";
+import p1img from "../../../images/sum.png";
+import p2img from "../../../images/iphone.png";
 
 const data = [
   {
@@ -41,7 +41,7 @@ const data = [
     id: 6,
     title: "Sumsung",
     price: 9999,
-    image: mainimg
+    image: p2img
   }
 ]
 export const PhoneBestProduct = () => {
@@ -74,8 +74,8 @@ export const PhoneBestProduct = () => {
                   <ScrollView horizontal={true}>
                     <View style={[mystyle.inner, mystyle.box]}>
                       <TouchableOpacity>
-                        <Text style={[mystyle.text,{fontWeight:'bold',color:"#ffff"}]}>From ₹{item.price}*</Text>
-                        <Text style={[mystyle.text,mystyle.title]}>Best deals on {item.title}</Text>
+                        <Text style={[mystyle.text, { fontWeight: 'bold', color: "#ffff" }]}>From ₹{item.price}*</Text>
+                        <Text style={[mystyle.text, mystyle.title]}>Best deals on {item.title}</Text>
                         <Image source={item.image} style={[mystyle.proImg]} />
                       </TouchableOpacity>
                     </View>
@@ -88,88 +88,13 @@ export const PhoneBestProduct = () => {
     </SafeAreaView>
   )
 }
-
-export const ClothesBestProuct = () => {
-  return (
-    <SafeAreaView>
-      <View>
-        <View>
-          <Text style={[mystyle.text]}>Clothes</Text>
-          <View style={mystyle.outerBox} >
-            {
-              data.map((item, index) => (
-                <View key={index} style={[mystyle.box, mystyle.innerBox]}>
-                  <ScrollView horizontal={true}>
-                    <TouchableOpacity>
-                      <Text style={[mystyle.text]}>{item.title}</Text>
-                      <Text style={[mystyle.text]}  >{item.price}</Text>
-                    </TouchableOpacity>
-                  </ScrollView>
-                </View>
-              ))
-            }</View>
-        </View>
-      </View>
-    </SafeAreaView>
-  )
-}
-export const ElectronicBestProduct = () => {
-  return (
-    <SafeAreaView>
-      <View>
-        <View>
-          <Text style={[mystyle.text]}>Electronic</Text>
-          <View style={mystyle.outerBox} >
-            {
-              data.map((item, index) => (
-                <View key={index} style={[mystyle.box, mystyle.innerBox]}>
-                  <ScrollView horizontal={true}>
-
-                    <TouchableOpacity>
-                      <Text style={[mystyle.text]}>{item.title}</Text>
-                      <Text style={[mystyle.text]}  >{item.price}</Text>
-                    </TouchableOpacity>
-                  </ScrollView>
-                </View>
-              ))
-            }</View>
-        </View>
-      </View>
-    </SafeAreaView>
-  )
-}
-export const FoodBestProduct = () => {
-  return (
-    <SafeAreaView>
-      <View>
-        <View>
-          <Text style={[mystyle.text]}>Electronic</Text>
-          <View style={mystyle.outerBox} >
-            {
-              data.map((item, index) => (
-                <View key={index} style={[mystyle.box, mystyle.innerBox]}>
-                  <ScrollView horizontal={true}>
-
-                    <TouchableOpacity>
-                      <Text style={[mystyle.text]}>{item.title}</Text>
-                      <Text style={[mystyle.text]}  >{item.price}</Text>
-                    </TouchableOpacity>
-                  </ScrollView>
-                </View>
-              ))
-            }</View>
-        </View>
-      </View>
-    </SafeAreaView>
-  )
-}
 export const mystyle = StyleSheet.create({
-  title:{
+  title: {
     backgroundColor: 'rgba(0,0,0,0.6)',
-    fontSize:13,
-    margin:2,
-    padding:2,
-    borderRadius:6
+    fontSize: 13,
+    margin: 2,
+    padding: 2,
+    borderRadius: 6
   },
   text: {
     color: '#fff',
@@ -222,7 +147,7 @@ export const mystyle = StyleSheet.create({
     width: 150,
     height: 150,
     zIndex: 10,
-    borderRadius:2,
+    borderRadius: 2,
   },
   inner: {
     marginBottom: 2,

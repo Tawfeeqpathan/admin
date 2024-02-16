@@ -96,10 +96,7 @@ export default function Home() {
         <View>
         <Fitness/>
         </View>
-        <View>
-        <PhoneBestProduct/>
-        <ClothesBestProuct/>
-        </View>
+       
       </ScrollView>
     </SafeAreaView>
   )
