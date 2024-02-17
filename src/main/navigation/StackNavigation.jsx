@@ -79,8 +79,9 @@ export default function StackNavigation() {
     return (
         <NavigationContainer >
             <Stack.Navigator>
+            <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }}  />
             <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
-                <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }}  />
+                
               
                 <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
                 

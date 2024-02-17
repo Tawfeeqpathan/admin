@@ -7,8 +7,12 @@ import appaimg from "../../../images/apparel.png"
 import accesinimg from "../../../images/accessories.png"
 import cosimg from "../../../images/cosmetic.png"
 import toyimg from "../../../images/toys.png"
+import furimg from "../../../images/furniture.png"
+import spimg from "../../../images/sports.png"
+import shimg from "../../../images/shoes.png"
+import { Lists } from '../components/CategoryList';
 export default function Shoping() {
-    const data = [
+    const listdata = [
         {
             id: 1,
             img:eleimg ,
@@ -34,6 +38,21 @@ export default function Shoping() {
             img: toyimg,
             title: "Toys"
         },
+        {
+            id: 6,
+            img: spimg,
+            title: "Sports"
+        },
+        {
+            id: 7,
+            img: furimg,
+            title: "Furniture"
+        },
+        {
+            id: 8,
+            img: shimg,
+            title: "Shoes"
+        },
     ]
     return (
         <SafeAreaView>
@@ -44,17 +63,7 @@ export default function Shoping() {
                         <Text style={[mystyle.text]}>Shoping</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={[mystyle.box, { justifyContent:'flex-start',
-                 flexDirection: 'row',gap:5,marginLeft:30 ,flexWrap:'wrap'}]}>
-                    {
-                        data.map((item) => (
-                            <TouchableOpacity style={[mystyle.item,mystyle.box]} key={item.id}>
-                                <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
-                                <Text style={[mystyle.box,{ color: '#fff',paddingLeft:0,fontSize:12 }]}>{item.title}</Text>
-                            </TouchableOpacity>
-                        ))
-                    }
-                </View>
+                <Lists listdata= {listdata}/>
             </View>
         </SafeAreaView>
     )

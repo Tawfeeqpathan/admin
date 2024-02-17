@@ -6,9 +6,13 @@ import birimg from "../../../images/biryani.png"
 import burimg from "../../../images/burger.png"
 import chiimg from "../../../images/chinese.png"
 import pizimg from "../../../images/pizza.png"
-
+import moimg from "../../../images/momo.png"
+import ckimg from "../../../images/chicken.png"
+import frenchimg from "../../../images/french.png"
+import swimg from "../../../images/sweet.png"
+import { Lists } from '../components/CategoryList';
 export default function Food() {
-    const data = [
+    const listdata = [
         {
             id: 1,
             img:pizimg,
@@ -29,6 +33,26 @@ export default function Food() {
             img: birimg,
             title:"Biryani"
         },
+        {
+            id: 5,
+            img: ckimg,
+            title:"Chicken"
+        },
+        {
+            id: 6,
+            img: moimg,
+            title:"Momos"
+        },
+        {
+            id: 7,
+            img: frenchimg,
+            title:"F-fries"
+        },
+        {
+            id: 8,
+            img: swimg,
+            title:"Sweet"
+        },
     ]
     return (
         <SafeAreaView>
@@ -39,17 +63,7 @@ export default function Food() {
                         <Text style={[mystyle.text]}>Food</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={[mystyle.box, { justifyContent:'flex-start',
-                 flexDirection: 'row',gap:5,marginLeft:30 ,flexWrap:'wrap'}]}>
-                    {
-                        data.map((item) => (
-                            <TouchableOpacity style={[mystyle.item,mystyle.box]} key={item.id}>
-                                <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
-                                <Text style={{ color: '#fff',paddingLeft:10 }}>{item.title}</Text>
-                            </TouchableOpacity>
-                        ))
-                    }
-                </View>
+               <Lists listdata={listdata}/>
             </View>
         </SafeAreaView>
     )

@@ -5,7 +5,10 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import mainimg from "../../../images/sumsung.png";
 import p1img from "../../../images/sum.png";
 import p2img from "../../../images/iphone.png";
-
+import tabimg from "../../../images/tab.png";
+import earimg from "../../../images/earbud.png";
+import { ProductCarousel } from './Carousel';
+import Search from './Search';
 const data = [
   {
     id: 1,
@@ -21,53 +24,41 @@ const data = [
   },
   {
     id: 3,
-    title: "I phone",
+    title: "Tablet",
     price: 9999,
-    image: p1img
+    image: tabimg
   },
   {
     id: 4,
-    title: "Sumsung",
+    title: "Earbus",
     price: 9999,
-    image: p2img
+    image: earimg
   },
   {
     id: 5,
     title: "I phone",
     price: 9999,
-    image: p1img
+    image:p2img
   },
   {
     id: 6,
     title: "Sumsung",
     price: 9999,
-    image: p2img
+    image:  p1img
   }
 ]
 export const PhoneBestProduct = () => {
-
   return (
     <SafeAreaView>
-      <View>
+      <View style={{marginTop:10}}>
+        <Search/>
         <View>
-          <Text style={[mystyle.text, { borderBottomColor: '#fff', borderBottomWidth: 2, width: 150 }]}>  Smart Phone</Text>
-          <View style={mystyle.outerBox} >
-            <TouchableOpacity>
-              <View style={[mystyle.box, mystyle.headbox]}>
-                <View style={[mystyle.headinfo, { marginLeft: 20, marginTop: 10 }]}>
-                  <Text style={[mystyle.text, { fontWeight: 'bold', fontSize: 30 }]}>Just</Text>
-                  <Text style={[mystyle.text, { fontWeight: 'bold' }]}>₹ 79,999</Text>
-                  <Text style={[mystyle.text]}>Glaxy S24</Text>
-                  <Text style={[{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold', fontSize: 15 }]}>+ 5% mj coin</Text>
-                  <Text style={[mystyle.bottomText]}>Price inclusive of all offer</Text>
-                </View>
-                <View style={[mystyle.box]}>
-                  <Text style={{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold' }}>Sumsung</Text>
-                  <Image source={mainimg} style={{ width: 160, height: 160 }} />
-                </View>
-
-              </View>
-            </TouchableOpacity>
+          <Text style={[mystyle.text, { borderBottomColor: '#fff', borderBottomWidth: 2, width: 150 }]}>  Best deals</Text>
+          
+            <View>
+              <ProductCarousel/>
+            </View>  
+             <View style={mystyle.outerBox} >
             {
               data.map((item, index) => (
                 <View key={index} style={[mystyle.innerBox, mystyle.box]}>
@@ -86,6 +77,26 @@ export const PhoneBestProduct = () => {
         </View>
       </View>
     </SafeAreaView>
+  )
+}
+export const  HeadCarousel = ()=>{
+  return(
+    <TouchableOpacity style={mystyle.box}>
+    <View style={[mystyle.box, mystyle.headbox]}>
+      <View style={[mystyle.headinfo, { marginLeft: 20, marginTop: 10 }]}>
+        <Text style={[mystyle.text, { fontWeight: 'bold', fontSize: 30 }]}>Just</Text>
+        <Text style={[mystyle.text, { fontWeight: 'bold' }]}>₹ 79,999</Text>
+        <Text style={[mystyle.text]}>Glaxy S24</Text>
+        <Text style={[{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold', fontSize: 15 }]}>+ 5% mj coin</Text>
+        <Text style={[mystyle.bottomText]}>Price inclusive of all offer</Text>
+      </View>
+      <View style={[mystyle.box]}>
+        <Text style={{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold' }}>Sumsung</Text>
+        <Image source={mainimg} style={{ width: 160, height: 160 }} />
+      </View>
+
+    </View>
+  </TouchableOpacity>
   )
 }
 export const mystyle = StyleSheet.create({
@@ -116,7 +127,7 @@ export const mystyle = StyleSheet.create({
   innerBox: {
     borderWidth: 2,
     margin: 5,
-    width: 180,
+    width: 160,
     height: 230,
     backgroundColor: '#FA8200'
   },

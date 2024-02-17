@@ -7,10 +7,11 @@ import busimg from "../../../images/bus.png"
 import autoimg from "../../../images/auto.png"
 import tempoimg from "../../../images/tempo.png"
 import grainimg from "../../../images/Grains.png"
+import { Lists } from '../components/CategoryList';
 
 
 export default function Travel() {
-    const data = [
+    const listdata = [
         {
             id: 1,
             img:cabimg ,
@@ -41,17 +42,7 @@ export default function Travel() {
                         <Text style={[mystyle.text]}>Travel</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={[mystyle.box, { justifyContent:'flex-start',
-                 flexDirection: 'row',gap:5,marginLeft:30 ,flexWrap:'wrap'}]}>
-                    {
-                        data.map((item) => (
-                            <TouchableOpacity style={[mystyle.box,mystyle.item]} key={item.id}>
-                                <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 40 }} resizeMode="contain" />
-                                <Text style={{ color: '#fff',paddingLeft:10 }}>{item.title}</Text>
-                            </TouchableOpacity>
-                        ))
-                    }
-                </View>
+               <Lists listdata={listdata}/>
             </View>
         </SafeAreaView>
     )

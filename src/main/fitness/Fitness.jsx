@@ -9,8 +9,9 @@ import deitimg from "../../../images/diets.png"
 import goalimg from "../../../images/goal.png"
 import HomeProduct from '../components/HomeProduct';
 import Category from '../category/Category';
+import { Lists } from '../components/CategoryList';
 export default function Fitness() {
-    const data = [
+    const listdata = [
         {
             id: 1,
             img:gymimg,
@@ -18,8 +19,8 @@ export default function Fitness() {
         },
         {
             id: 2,
-            img:supimg,
-            title: "Supple"
+            img: goalimg,
+            title: "Goal"
         },
         {
             id: 3,
@@ -28,9 +29,11 @@ export default function Fitness() {
         },
         {
             id: 4,
-            img: goalimg,
-            title: "Goal"
+            img:supimg,
+            title: "Supple"
         },
+      
+       
     ]
     return (
         <SafeAreaView>
@@ -41,17 +44,7 @@ export default function Fitness() {
                         <Text style={[mystyle.text]}>Fitness</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={[mystyle.box, { justifyContent:'flex-start',
-                 flexDirection: 'row',gap:10,marginLeft:30 ,flexWrap:'wrap'}]}>
-                    {
-                        data.map((item) => (
-                            <TouchableOpacity style={[mystyle.box,mystyle.item]} key={item.id}>
-                                <Image source={item.img} style={{ width: 40, height: 40, borderRadius: 50 }} resizeMode="contain" />
-                                <Text style={[mystyle.box,{ color: '#fff',paddingLeft:10 }]}>{item.title}</Text>
-                            </TouchableOpacity>
-                        ))
-                    }
-                </View>
+                <Lists listdata={listdata} />
             </View>
         </SafeAreaView>
     )

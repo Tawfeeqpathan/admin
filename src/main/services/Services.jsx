@@ -1,15 +1,16 @@
 import React from 'react'
-import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Icon from 'react-native-vector-icons/dist/AntDesign';
-import Eimg from "../../../images/Erepair.png"
-import Simg from "../../../images/salon.png"
+import Icon  from 'react-native-vector-icons/dist/AntDesign';
+import Eimg  from "../../../images/Erepair.png"
+import Simg  from "../../../images/salon.png"
 import Pbimg from "../../../images/plumber.png"
 import ptimg from "../../../images/painter.png"
-
-
+import climg from "../../../images/cleaner.png"
+import acimg from "../../../images/ac.png"
+import { Lists } from '../components/CategoryList';
 export default function Services() {
-    const data = [
+    const listdata= [
         {
             id: 1,
             img:Eimg ,
@@ -30,6 +31,16 @@ export default function Services() {
             img: ptimg,
             title: "Painter"
         },
+        {
+            id: 5,
+            img: climg,
+            title: "Cleaner"
+        },
+        {
+            id: 6,
+            img: acimg,
+            title: "Ac service"
+        },
     ]
     return (
         <SafeAreaView>
@@ -40,17 +51,7 @@ export default function Services() {
                         <Text style={[mystyle.text]}>Services</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={[mystyle.box, { justifyContent:'flex-start',
-                 flexDirection: 'row',gap:5,marginLeft:30 ,flexWrap:'wrap'}]}>
-                    {
-                        data.map((item) => (
-                            <TouchableOpacity style={[mystyle.box,mystyle.item]} key={item.id}>
-                                <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
-                                <Text style={{ color: '#fff',paddingLeft:10 }}>{item.title}</Text>
-                            </TouchableOpacity>
-                        ))
-                    }
-                </View>
+                <Lists listdata={listdata}/>
             </View>
         </SafeAreaView>
     )

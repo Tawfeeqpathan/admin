@@ -46,6 +46,7 @@ export default function Search() {
         </SafeAreaView>
     )
 }
+
 const mystyle = StyleSheet.create({
     box: {
         display: 'flex',

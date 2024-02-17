@@ -4,6 +4,7 @@ import Swiper from 'react-native-swiper';
 import img1 from "../../../images/a1.png"
 import img2 from "../../../images/a2.png"
 import img3 from "../../../images/a3.png"
+import { HeadCarousel } from './HomeProduct';
 const Carousel = () => {
     const cData = [
         {
@@ -35,7 +36,22 @@ const Carousel = () => {
     </Swiper>
   );
 };
-
+export const ProductCarousel = ()=>{
+  return(
+    <Swiper
+    style={{height:210}}
+      showsPagination={true}
+      autoplay={true}
+      autoplayTimeout={2}
+      dot={<View style={styles.dot} />}
+      activeDot={<View style={styles.activeDot} />}
+    > 
+<HeadCarousel />
+  <HeadCarousel/>
+  <HeadCarousel/>
+    </Swiper>
+  )
+}
 const styles = {
   slide: {
     flex: 1,
