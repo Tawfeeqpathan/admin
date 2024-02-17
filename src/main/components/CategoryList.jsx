@@ -10,7 +10,7 @@ import pizimg from "../../../images/pizza.png"
 import moimg from "../../../images/momo.png"
 import ckimg from "../../../images/chicken.png"
 import frenchimg from "../../../images/french.png"
-import swimg from "../../../images/sweet.png"
+import swimg from "../../../images/sweet.png";
 const data = [
   {
       id: 1,
@@ -130,7 +130,7 @@ const mystyle = StyleSheet.create({
   },
   item: {
       borderRadius: 50,
-      width: 90,
+      width: 86,
       marginTop:10,
   }
 })

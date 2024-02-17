@@ -24,7 +24,7 @@ export default function Search() {
                         style={[mystyle.input]}
                         onChangeText={(text)=>handleSearch(text)}
                     />
-                    <View style={{ marginLeft: -250 }}>
+                    <View style={{ marginLeft: -220 }}>
                         <Icon name="search" size={20} color={'black'} />
                     </View>
                 </View>
@@ -37,9 +37,9 @@ export default function Search() {
                     </View>
 
                 </View>
-                <View style={{marginLeft:5}}>
+                <View style={{marginLeft:-1}}>
                    <TouchableOpacity>
-                   <MIcon name="cart-variant" size={40} color={"#fff"}/>
+                   <Icon name="shopping-cart" size={40} color={"#fff"}/>
                    </TouchableOpacity>
                 </View>
             </View>
@@ -58,11 +58,11 @@ const mystyle = StyleSheet.create({
         fontSize: 20
     },
     input: {
-        width: 270,
+        width: 230,
         height: 40,
         backgroundColor: '#fff',
         color: 'black',
-        paddingLeft: 50,
+        paddingLeft: 10,
         borderRadius:8,
     },
     mjcoin: {
@@ -77,6 +77,7 @@ const mystyle = StyleSheet.create({
         gap:1,
         elevation:9,
         shadowColor: 'gray',
+        marginLeft:-40
     },
     coin: {
         width: 50,

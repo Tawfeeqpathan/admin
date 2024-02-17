@@ -1,12 +1,15 @@
 import React from 'react'
-import { ScrollView, View } from 'react-native'
+import { ScrollView, TouchableOpacity, View } from 'react-native'
 import { PhoneBestProduct } from '../components/HomeProduct'
 
-export default function Offer() {
+export default function Offer({navigation }) {
   return (
     <View style={{backgroundColor:'black'}}>
    <ScrollView>
-   <PhoneBestProduct/>
+    <TouchableOpacity onPress={()=>navigation.navigate("productdetails")}>
+       <PhoneBestProduct/>
+    </TouchableOpacity>
+  
    </ScrollView>
     </View>
   )

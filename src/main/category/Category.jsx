@@ -16,9 +16,11 @@ import Travel from '../travel/Travel'
 import Shoping from '../shoping/Shoping'
 import Fitness from '../fitness/Fitness'
 import Services from '../services/Services'
+import Carousel from '../components/Carousel'
 export default function Category({icon,listdata}) {
   const componentsarr = [
     <Search/>,
+    <Carousel/>,
     <Shoping/>,
     <Food/>,
     <Travel/>,

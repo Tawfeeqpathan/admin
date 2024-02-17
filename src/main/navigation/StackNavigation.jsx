@@ -12,6 +12,7 @@ import Home from '../Home';
 import { CategoryIcon, CategoryOutline } from './CategoryIcon';
 import Dashboard from '../dashboard/Dashboard';
 import Offer from '../offer/Offer';
+import ProductDetails from '../productDetails/ProductDetails';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
@@ -79,12 +80,15 @@ export default function StackNavigation() {
     return (
         <NavigationContainer >
             <Stack.Navigator>
-            <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }}  />
+            <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
             <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
-                
-              
-                <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
-                
+            <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }}  />
+            <Stack.Screen name="productdetails" component={ProductDetails}  options={{ headerShown: false }}/>
+         
+          
+        
+         
+            
             </Stack.Navigator>
         </NavigationContainer>
     )
