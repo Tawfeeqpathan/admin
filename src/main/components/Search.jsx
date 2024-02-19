@@ -60,7 +60,6 @@ const mystyle = StyleSheet.create({
         fontSize: 20
     },
     input: {
-
         height: 40,
         backgroundColor: '#fff',
         color: 'black',
