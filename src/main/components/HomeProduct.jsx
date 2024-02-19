@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text, FlatList, ScrollView, TouchableOpacity, Image } from 'react-native'
+import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 
 import { SafeAreaView } from 'react-native-safe-area-context'
 import mainimg from "../../../images/sumsung.png";
@@ -38,33 +38,33 @@ const data = [
     id: 5,
     title: "I phone",
     price: 9999,
-    image:p2img
+    image: p2img
   },
   {
     id: 6,
     title: "Sumsung",
     price: 9999,
-    image:  p1img
+    image: p1img
   }
 ]
-export const PhoneBestProduct = ({navigation }) => {
+export const PhoneBestProduct = ({navigation}) => {
   return (
     <SafeAreaView>
-      <View style={{marginTop:10}}>
-        <Search/>
+      <View style={{ marginTop: 10 }}>
+        <Search />
         <View>
           <Text style={[mystyle.text, { borderBottomColor: '#fff', borderBottomWidth: 2, width: 150 }]}>  Best deals</Text>
-          
-            <View>
-              <ProductCarousel/>
-            </View>  
-             <View style={mystyle.outerBox} >
+
+          <View>
+            <ProductCarousel />
+          </View>
+          <View style={mystyle.outerBox} >
             {
               data.map((item, index) => (
                 <View key={index} style={[mystyle.innerBox, mystyle.box]}>
                   <ScrollView horizontal={true}>
                     <View style={[mystyle.inner, mystyle.box]}>
-                      <TouchableOpacity onPress={()=>navigation.navigate("productdetails")}>
+                      <TouchableOpacity onPress={()=>navigation.navigate("productdetails")} >
                         <Text style={[mystyle.text, { fontWeight: 'bold', color: "#ffff" }]}>From ₹{item.price}*</Text>
                         <Text style={[mystyle.text, mystyle.title]}>Best deals on {item.title}</Text>
                         <Image source={item.image} style={[mystyle.proImg]} />
@@ -79,24 +79,24 @@ export const PhoneBestProduct = ({navigation }) => {
     </SafeAreaView>
   )
 }
-export const  HeadCarousel = ()=>{
-  return(
+export const HeadCarousel = () => {
+  return (
     <TouchableOpacity style={mystyle.box}>
-    <View style={[mystyle.box, mystyle.headbox]}>
-      <View style={[mystyle.headinfo, { marginLeft: 20, marginTop: 10 }]}>
-        <Text style={[mystyle.text, { fontWeight: 'bold', fontSize: 30 }]}>Just</Text>
-        <Text style={[mystyle.text, { fontWeight: 'bold' }]}>₹ 79,999</Text>
-        <Text style={[mystyle.text]}>Glaxy S24</Text>
-        <Text style={[{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold', fontSize: 15 }]}>+ 5% mj coin</Text>
-        <Text style={[mystyle.bottomText]}>Price inclusive of all offer</Text>
-      </View>
-      <View style={[mystyle.box]}>
-        <Text style={{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold' }}>Sumsung</Text>
-        <Image source={mainimg} style={{ width: 160, height: 160 }} />
-      </View>
+      <View style={[mystyle.box, mystyle.headbox]}>
+        <View style={[mystyle.headinfo, { marginLeft: 20, marginTop: 10 }]}>
+          <Text style={[mystyle.text, { fontWeight: 'bold', fontSize: 30 }]}>Just</Text>
+          <Text style={[mystyle.text, { fontWeight: 'bold' }]}>₹ 79,999</Text>
+          <Text style={[mystyle.text]}>Glaxy S24</Text>
+          <Text style={[{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold', fontSize: 15 }]}>+ 5% mj coin</Text>
+          <Text style={[mystyle.bottomText]}>Price inclusive of all offer</Text>
+        </View>
+        <View style={[mystyle.box]}>
+          <Text style={{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold' }}>Sumsung</Text>
+          <Image source={mainimg} style={{ width: 160, height: 160 }} />
+        </View>
 
-    </View>
-  </TouchableOpacity>
+      </View>
+    </TouchableOpacity>
   )
 }
 export const mystyle = StyleSheet.create({

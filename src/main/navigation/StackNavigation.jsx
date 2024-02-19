@@ -18,27 +18,28 @@ const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
     function BottomTabs() {
         return (
-            <Tab.Navigator screenOptions={{tabBarActiveBackgroundColor:'black',tabBarInactiveBackgroundColor:'black',
-            tabBarActiveTintColor:'#fa8200',
-            tabBarStyle:{height:60}
+            <Tab.Navigator screenOptions={{
+                tabBarActiveBackgroundColor: 'black', tabBarInactiveBackgroundColor: 'black',
+                tabBarActiveTintColor: '#fa8200',
+                tabBarStyle: { height: 60 }
             }}>
                 <Tab.Screen
                     name='home'
                     component={Home}
                     options={{
                         tabBarLabel: "Home",
-                        tabBarLabelStyle: {  fontSize: 13, },
+                        tabBarLabelStyle: { fontSize: 13, },
                         headerShown: false,
                         tabBarIcon: ({ focused }) => focused ? (<IonIcon name="home" size={35} color="#fa8200" />)
                             : (<IonIcon name="home-outline" size={35} color="#fff" />)
                     }}
                 />
-                  <Tab.Screen
+                <Tab.Screen
                     name='offer'
                     component={Offer}
                     options={{
                         tabBarLabel: "Offer",
-                        tabBarLabelStyle: {  fontSize: 13, },
+                        tabBarLabelStyle: { fontSize: 13, },
                         headerShown: false,
                         tabBarIcon: ({ focused }) => focused ? (<IonIcon name="pricetags-sharp" size={35} color="#fa8200" />)
                             : (<IonIcon name="pricetags-outline" size={35} color="#fff" />)
@@ -49,7 +50,7 @@ export default function StackNavigation() {
                     component={Category}
                     options={{
                         tabBarLabel: "Category",
-                        tabBarLabelStyle: {  fontSize: 13, },
+                        tabBarLabelStyle: { fontSize: 13, },
                         headerShown: false,
                         tabBarIcon: ({ focused }) => focused ? (<CategoryIcon />) : (<CategoryOutline />)
                     }}
@@ -69,7 +70,7 @@ export default function StackNavigation() {
                     component={Wallet}
                     options={{
                         tabBarLabel: "Wallet",
-                        tabBarLabelStyle: {  fontSize: 13, },
+                        tabBarLabelStyle: { fontSize: 13, },
                         headerShown: false,
                         tabBarIcon: ({ focused }) => focused ? (<MaterialComIcons name="wallet" size={35} color="#fa8200" />) : (<MaterialComIcons name="wallet-outline" size={35} color="#fff" />)
                     }}
@@ -80,15 +81,11 @@ export default function StackNavigation() {
     return (
         <NavigationContainer >
             <Stack.Navigator>
-            <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
-            <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
-            <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }}  />
-            <Stack.Screen name="productdetails" component={ProductDetails}  options={{ headerShown: false }}/>
-         
-          
-        
-         
-            
+                <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }} />
+                <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
+                <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
+
+                <Stack.Screen name="productdetails" component={ProductDetails} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

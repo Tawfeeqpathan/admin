@@ -17,7 +17,7 @@ import Shoping from '../shoping/Shoping'
 import Fitness from '../fitness/Fitness'
 import Services from '../services/Services'
 import Carousel from '../components/Carousel'
-export default function Category({icon,listdata}) {
+export default function Category() {
   const componentsarr = [
     <Search/>,
     <Carousel/>,
@@ -26,7 +26,6 @@ export default function Category({icon,listdata}) {
     <Travel/>,
     <Services/>,
    <Fitness/>,
-   <Fitness/>
   ]
   return (
     <SafeAreaView >

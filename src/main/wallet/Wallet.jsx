@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Button } from 'react-native';
 
-
 const Wallet = () => {
   const [balance, setBalance] = useState(100); // Initial balance set to 100 coins
   const [showQR, setShowQR] = useState(false);
@@ -23,7 +22,6 @@ const Wallet = () => {
       <Button title="Receive Coins" onPress={handleReceive} />
       {showQR && (
         <View>
-          
           <Text style={{ color: 'white' }}>Scan this QR code to receive coins</Text>
         </View>
       )}

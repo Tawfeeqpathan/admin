@@ -13,7 +13,6 @@ export default function Anitext() {
     else { setCurrentName(newName) }
     return
   }
-
   useEffect(() => {
     setTimeout(() => {
       setRandomName()

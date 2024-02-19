@@ -1,14 +1,11 @@
 import React from 'react'
-import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import MIcon from 'react-native-vector-icons/dist/MaterialIcons';
 import gymimg from "../../../images/gym.png"
 import supimg from "../../../images/supplement.png"
 import deitimg from "../../../images/diets.png"
 import goalimg from "../../../images/goal.png"
-import HomeProduct from '../components/HomeProduct';
-import Category from '../category/Category';
 import { Lists } from '../components/CategoryList';
 export default function Fitness() {
     const listdata = [
