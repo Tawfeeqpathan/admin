@@ -67,10 +67,10 @@ export default function Dashboard() {
     backgroundGradientToOpacity: 0.5,
     color: (opacity = 0.5) => `rgba(255, 255, 255, ${opacity})`,
     strokeWidth: 0.5,
-    barPercentage:0.5,
+    barPercentage: 0.5,
     useShadowColorFromDataset: false,
-    decimalPlaces:0, 
-   
+    decimalPlaces: 0,
+
   }
   return (
     <SafeAreaView>
@@ -97,35 +97,35 @@ export default function Dashboard() {
             </View>
 
           </View>
-         <View style={mystyle.box}>
-         <Text style={[mystyle.text, { marginBottom: 10, }]}>Bar graph show your purchases in every month (₹)</Text>
-         </View>
-         <ScrollView horizontal={true}>
-         <View style={[mystyle.box,]} >
-           
-            {
-              dataa ? (<View style={[mystyle.box]}>
-
-
-                <BarChart
-                yAxisLabel="₹"
-                  data={dataa}
-                  height={250}
-                  width={700}
-                  chartConfig={barConfig}
-                  showValuesOnTopOfBars={true}
-            
-                />
-
-              </View>) : (<Text style={[mystyle.text]}>No record available!</Text>)
-            }
-          </View>
-         </ScrollView>
-         <View style={mystyle.box}>
-         <Text style={[mystyle.text, { marginTop:-20 }]}> month →</Text>
-         </View>
           <View style={mystyle.box}>
-            <Text style={[mystyle.text, { marginTop:70 }]}>Pie chart show Where did you use your  money (₹)</Text>
+            <Text style={[mystyle.text, { marginBottom: 10, }]}>Bar graph show your purchases in every month (₹)</Text>
+          </View>
+          <ScrollView horizontal={true}>
+            <View style={[mystyle.box,]} >
+
+              {
+                dataa ? (<View style={[mystyle.box]}>
+
+
+                  <BarChart
+                    yAxisLabel="₹"
+                    data={dataa}
+                    height={250}
+                    width={700}
+                    chartConfig={barConfig}
+                    showValuesOnTopOfBars={true}
+
+                  />
+
+                </View>) : (<Text style={[mystyle.text]}>No record available!</Text>)
+              }
+            </View>
+          </ScrollView>
+          <View style={mystyle.box}>
+            <Text style={[mystyle.text, { marginTop: -20 }]}> month →</Text>
+          </View>
+          <View style={mystyle.box}>
+            <Text style={[mystyle.text, { marginTop: 70 }]}>Pie chart show Where did you use your  money (₹)</Text>
             <PieChart
               data={piedata}
               width={400}
@@ -134,7 +134,7 @@ export default function Dashboard() {
               accessor={"spend"}
               backgroundColor={"transparent"}
               absolute
-             
+
             />
           </View>
         </ScrollView>

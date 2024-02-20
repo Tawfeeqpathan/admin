@@ -15,7 +15,6 @@ export const Lists = ({ listdata }) => {
               <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
               <Text style={{ color: '#fff', paddingLeft: 10 }}>{item.title}</Text>
             </TouchableOpacity>
-
           )}
           keyExtractor={item => item.id}
           numColumns={4}
@@ -40,6 +39,6 @@ const mystyle = StyleSheet.create({
     borderRadius: 50,
     width: 90,
     marginTop: 10,
-    marginRight:-5
+    marginRight:-10
   }
 })
