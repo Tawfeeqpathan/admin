@@ -1,56 +1,51 @@
-import React,{useEffect, useState} from 'react'
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import Ionicons from 'react-native-vector-icons/dist/Ionicons';
-import Entypo from 'react-native-vector-icons/dist/Entypo';
-import {FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import Carousel, { ProductCarousel } from './components/Carousel';
+import React from 'react';
+import { StyleSheet, View } from 'react-native'
+import Carousel from './components/Carousel';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import logo from "../../images/logo.png"
-import Search, { SearchBar } from './components/Search';
 import Shoping from './shoping/Shoping';
 import Food from './food/Food';
 import Services from './services/Services';
 import Fitness from './fitness/Fitness';
 import Travel from './travel/Travel';
-import {PhoneBestProduct,ClothesBestProuct} from "./components/HomeProduct"
 import Header from './components/Header';
+import { FlashList } from '@shopify/flash-list';
 export default function Home() {
-const componentsarr = [
-<Header/>,
-<Carousel/>,
-<Shoping/>,
-<Food/>,
-<Travel/>,
-<Services/>,
-<Fitness/>,]
+  const componentsarr = [
+    <Header />,
+    <Carousel />,
+    <Shoping />,
+    <Food />,
+    <Travel />,
+    <Services />,
+    <Fitness />,
+  ]
   return (
-    <SafeAreaView style={{backgroundColor:'black',height:'auto'}}>
+    <SafeAreaView style={{ backgroundColor: 'black', flex: 1 }}>
+      <FlashList
+        data={componentsarr}
+        renderItem={({ item }) => (
+          <View>
+            {item}
+          </View>
 
-     <FlatList
-    data={componentsarr}
-    renderItem={({item})=>(
-<View>
- {item}
-</View>
-
-    )}
-    key={({item,index})=>index}
-    />
-    
+        )}
+        key={({ item, index }) => index}
+        estimatedItemSize={1000}
+      />
 
     </SafeAreaView>
   )
 }
 
 const mystyle = StyleSheet.create({
-  box:{
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'space-between',
- 
+  box: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+
   },
-  text:{
-    color:'#fff',
-    fontSize:20
+  text: {
+    color: '#fff',
+    fontSize: 20
   }
 })

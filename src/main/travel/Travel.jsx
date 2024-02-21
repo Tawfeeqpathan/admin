@@ -7,7 +7,7 @@ import busimg from "../../../images/bus.png"
 import autoimg from "../../../images/auto.png"
 import tempoimg from "../../../images/tempo.png"
 import grainimg from "../../../images/Grains.png"
-import { Lists } from '../components/CategoryList';
+import { Lists } from '../components/List';
 
 
 export default function Travel() {

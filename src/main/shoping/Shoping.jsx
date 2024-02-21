@@ -10,7 +10,7 @@ import toyimg from "../../../images/toys.png"
 import furimg from "../../../images/furniture.png"
 import spimg from "../../../images/sports.png"
 import shimg from "../../../images/shoes.png"
-import { Lists } from '../components/CategoryList';
+import { Lists } from '../components/List';
 export default function Shoping() {
     const listdata = [
         {

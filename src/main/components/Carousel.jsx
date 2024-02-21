@@ -4,7 +4,7 @@ import Swiper from 'react-native-swiper';
 import img1 from "../../../images/a1.png"
 import img2 from "../../../images/a2.png"
 import img3 from "../../../images/a3.png"
-import { HeadCarousel } from './HomeProduct';
+import { HeadCarousel } from './OfferProductList';
 const Carousel = () => {
     const cData = [
         {

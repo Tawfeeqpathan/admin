@@ -10,7 +10,7 @@ import moimg from "../../../images/momo.png"
 import ckimg from "../../../images/chicken.png"
 import frenchimg from "../../../images/french.png"
 import swimg from "../../../images/sweet.png"
-import CategoryList from '../components/CategoryList';
+import CategoryList from '../components/List';
 import Food from '../food/Food'
 import Travel from '../travel/Travel'
 import Shoping from '../shoping/Shoping'

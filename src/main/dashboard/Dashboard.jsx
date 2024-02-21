@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import React from 'react'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Main from '../Main'
 import Icon from 'react-native-vector-icons/dist/FontAwesome5';
 import { BarChart, PieChart } from 'react-native-chart-kit';
 export default function Dashboard() {

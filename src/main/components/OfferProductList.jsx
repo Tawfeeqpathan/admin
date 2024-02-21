@@ -47,7 +47,7 @@ const data = [
     image: p1img
   }
 ]
-export const PhoneBestProduct = ({navigation}) => {
+export const OfferProductList = ({ navigation }) => {
   return (
     <SafeAreaView>
       <View style={{ marginTop: 10 }}>
@@ -64,7 +64,7 @@ export const PhoneBestProduct = ({navigation}) => {
                 <View key={index} style={[mystyle.innerBox, mystyle.box]}>
                   <ScrollView horizontal={true}>
                     <View style={[mystyle.inner, mystyle.box]}>
-                      <TouchableOpacity onPress={()=>navigation.navigate("productdetails")} >
+                      <TouchableOpacity onPress={() => navigation.navigate("productdetails")} >
                         <Text style={[mystyle.text, { fontWeight: 'bold', color: "#ffff" }]}>From ₹{item.price}*</Text>
                         <Text style={[mystyle.text, mystyle.title]}>Best deals on {item.title}</Text>
                         <Image source={item.image} style={[mystyle.proImg]} />

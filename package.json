@@ -13,6 +13,7 @@
     "@react-navigation/bottom-tabs": "^6.5.12",
     "@react-navigation/native": "^6.1.10",
     "@react-navigation/native-stack": "^6.9.18",
+    "@shopify/flash-list": "^1.6.3",
     "deprecated-react-native-prop-types": "2.2.0",
     "fabric": "^5.3.0",
     "qrcode.react": "^3.1.0",

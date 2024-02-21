@@ -8,7 +8,7 @@ import Pbimg from "../../../images/plumber.png"
 import ptimg from "../../../images/painter.png"
 import climg from "../../../images/cleaner.png"
 import acimg from "../../../images/ac.png"
-import { Lists } from '../components/CategoryList';
+import { Lists } from '../components/List';
 export default function Services() {
     const listdata= [
         {

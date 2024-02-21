@@ -6,7 +6,7 @@ import gymimg from "../../../images/gym.png"
 import supimg from "../../../images/supplement.png"
 import deitimg from "../../../images/diets.png"
 import goalimg from "../../../images/goal.png"
-import { Lists } from '../components/CategoryList';
+import { Lists } from '../components/List';
 export default function Fitness() {
     const listdata = [
         {

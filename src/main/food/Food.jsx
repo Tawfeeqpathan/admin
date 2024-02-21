@@ -10,7 +10,7 @@ import moimg from "../../../images/momo.png"
 import ckimg from "../../../images/chicken.png"
 import frenchimg from "../../../images/french.png"
 import swimg from "../../../images/sweet.png"
-import { Lists } from '../components/CategoryList';
+import { Lists } from '../components/List';
 export default function Food() {
     const listdata = [
         {
