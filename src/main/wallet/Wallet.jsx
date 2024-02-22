@@ -6,6 +6,7 @@ import img from "../../../images/coin.png";
 import Icon from 'react-native-vector-icons/dist/FontAwesome5';
 import OIcon from 'react-native-vector-icons/dist/Octicons';
 import AIcon from 'react-native-vector-icons/dist/AntDesign';
+import Transactions from './Transaction';
 const Wallet = () => {
   const [scanner, setScanner] = useState(false)
   return (
@@ -63,10 +64,9 @@ const Wallet = () => {
             <OIcon name="diff-added" size={30} color={'#4285F4'} />
             <Text style={[mystyle.smtext]}>Add Coins</Text>
           </TouchableOpacity>
-
-
         </View>
       </View>
+     <Transactions/>
     </SafeAreaView>)
   );
 };
