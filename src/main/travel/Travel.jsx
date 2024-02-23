@@ -38,7 +38,7 @@ export default function Travel() {
             <View>
                 <View style={[mystyle.box, { justifyContent:'flex-start', flexDirection: "row", marginTop: 20, marginLeft: 20 }]}>
                     <TouchableOpacity style={[mystyle.box, { flexDirection: 'row', gap: 6 }]}>
-                        <Icon name="cab" size={25} color={"#fff"} />
+                        <Icon name="cab" size={25} color={"black"} />
                         <Text style={[mystyle.text]}>Travel</Text>
                     </TouchableOpacity>
                 </View>
@@ -54,7 +54,7 @@ const mystyle = StyleSheet.create({
         justifyContent: 'center'
     },
     text: {
-        color: '#fff',
+        color: 'black',
         fontSize: 20,
         fontWeight: 600
     },

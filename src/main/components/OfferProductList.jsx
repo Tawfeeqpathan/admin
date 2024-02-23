@@ -53,7 +53,7 @@ export const OfferProductList = ({ navigation }) => {
       <View style={{ marginTop: 10 }}>
         <Search />
         <View>
-          <Text style={[mystyle.text, { borderBottomColor: '#fff', borderBottomWidth: 2, width: 150 }]}>  Best deals</Text>
+          <Text style={[mystyle.text, { color:"black",borderBottomColor: 'black', borderBottomWidth: 2, width: 150 }]}>  Best deals</Text>
 
           <View>
             <ProductCarousel />
@@ -122,17 +122,17 @@ export const mystyle = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    borderWidth: 2,
+   
   },
   innerBox: {
-    borderWidth: 2,
+ 
     margin: 5,
     width: 160,
     height: 230,
     backgroundColor: '#FA8200'
   },
   headbox: {
-    borderWidth: 2,
+    
     width: 360,
     height: 200,
     justifyContent: 'space-between',

@@ -21,7 +21,7 @@ export default function Anitext() {
 
   return (
     <View>
-      <Text style={{ color: "black" }}>{currentName}</Text>
+      <Text style={{ color: "#fff" }}>{currentName}</Text>
     </View>
   )
 }
