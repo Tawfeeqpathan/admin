@@ -7,13 +7,23 @@ import { FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View }
 import { SafeAreaView } from 'react-native-safe-area-context';
 import logo from "../../../images/logo.png"
 import Search, { SearchBar } from '../components/Search';
-
+import FastImage from 'react-native-fast-image';
+// <Image source={logo} style={{ width: 50, height: 50 }} resizeMode="contain"/>
 export default function Header() {
+  const logoUri = Image.resolveAssetSource(logo).uri;
   return (
     <SafeAreaView>
       <View style={[mystyle.box, { flexDirection: 'row', margin: 20 }]}>
         <View>
-          <Image source={logo} style={{ width: 50, height: 50 }} resizeMode="contain" />
+        <FastImage
+        style={{ width: 50, height: 50 }}
+        source={{
+            uri:logoUri,  
+            priority: FastImage.priority.high,
+        }}
+        
+    />
+
         </View>
         <View style={[mystyle.box, { flexDirection: 'row', gap: 4 }]}>
           <TouchableOpacity>

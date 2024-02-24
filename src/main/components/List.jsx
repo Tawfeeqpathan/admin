@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { FlashList } from '@shopify/flash-list'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import FastImage from 'react-native-fast-image';
 export const Lists = ({ listdata }) => {
+  const images = ({img})=>{
+    const imgUri = Image.resolveAssetSource(img).uri;
+    return imgUri
+  }
   return (
     <View style={[mystyle.box, {
       height: 170,
@@ -15,7 +20,7 @@ export const Lists = ({ listdata }) => {
         horizontal={false}
         renderItem={({ item }) => (
           <TouchableOpacity style={[mystyle.item, mystyle.box]} key={item.id}>
-            <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
+            <FastImage source={{uri:Image.resolveAssetSource(item.img).uri,priority:FastImage.priority.high}} style={{ width: 50, height: 50, borderRadius: 50 }}  />
             <Text style={{ color: '#fff', paddingLeft: 10 }}>{item.title}</Text>
           </TouchableOpacity>
         )}
