@@ -17,18 +17,18 @@ export default function Header() {
         </View>
         <View style={[mystyle.box, { flexDirection: 'row', gap: 4 }]}>
           <TouchableOpacity>
-            <Ionicons name="notifications-outline" size={33} color={'black'} />
+            <Ionicons name="notifications-outline" size={33} color={'#fff'} />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Icon name="user-o" size={30} color={'black'} />
+            <Icon name="user-o" size={30} color={'#fff'} />
           </TouchableOpacity>
 
         </View>
       </View>
       <Search />
       <View style={[{ flexDirection: 'row', width: 200, marginBottom: 5, marginLeft: 5 }]}>
-        <Entypo name="location-pin" size={22} color={'black'} />
-        <Text style={{ fontSize: 15, color: 'black' }}>kashmir,</Text>
+        <Entypo name="location-pin" size={22} color={'#fff'} />
+        <Text style={{ fontSize: 15, color: '#fff' }}>kashmir,</Text>
         <Text style={{ fontSize: 15, color: '#B805DC' }}> 190001</Text>
       </View>
     </SafeAreaView>

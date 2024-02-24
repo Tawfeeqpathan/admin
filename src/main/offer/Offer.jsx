@@ -4,7 +4,7 @@ import { OfferProductList } from '../components/OfferProductList'
 
 export default function Offer({ navigation }) {
   return (
-    <View style={{ backgroundColor: '#fff' }}>
+    <View style={{ backgroundColor: 'black' }}>
       <ScrollView>
         <TouchableOpacity >
           <OfferProductList navigation={navigation} />

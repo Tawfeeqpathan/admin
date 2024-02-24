@@ -59,7 +59,7 @@ export default function Food() {
             <View>
                 <View style={[mystyle.box, { justifyContent:'flex-start', flexDirection: "row", marginTop: 20, marginLeft: 20 }]}>
                     <TouchableOpacity style={[mystyle.box, { flexDirection: 'row', gap: 6 }]}>
-                        <Icon name="fast-food" size={25} color={"black"} />
+                        <Icon name="fast-food" size={25} color={"#fff"} />
                         <Text style={[mystyle.text]}>Food</Text>
                     </TouchableOpacity>
                 </View>
@@ -75,7 +75,7 @@ const mystyle = StyleSheet.create({
         justifyContent: 'center'
     },
     text: {
-        color: 'black',
+        color: '#fff',
         fontSize: 20,
         fontWeight: 600
     },

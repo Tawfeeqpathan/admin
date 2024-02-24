@@ -15,7 +15,7 @@ export default function Search() {
         <SafeAreaView style={{ marginBottom: 20 }}>
             <View style={[mystyle.box, { flexDirection: 'row', gap: 5 }]}>
                 <View style={{ position: 'absolute', zIndex: 20, left: 25 }}>
-                    <Icon name="search" size={20} color={'#fff'} />
+                    <Icon name="search" size={20} color={'black'} />
                 </View>
                 <View style={[mystyle.box, { flexDirection: 'row', marginLeft: 10, width: 270 }]}>
                     {
@@ -41,7 +41,7 @@ export default function Search() {
                 </View>
                 <View style={{ marginLeft: -1 }}>
                     <TouchableOpacity>
-                        <MIcon name="cart-variant" size={40} color={"black"} />
+                        <MIcon name="cart-variant" size={40} color={"#fff"} />
                     </TouchableOpacity>
                 </View>
             </View>
@@ -56,12 +56,12 @@ const mystyle = StyleSheet.create({
         justifyContent: 'centre'
     },
     text: {
-        color: 'black',
+        color: '#fff',
         fontSize: 20
     },
     input: {
         height: 40,
-        backgroundColor: 'black',
+        backgroundColor: '#fff',
         color: 'black',
         paddingLeft: 40,
         borderRadius: 8,

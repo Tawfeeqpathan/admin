@@ -29,7 +29,7 @@ export default function Category() {
   ]
   return (
     <SafeAreaView >
-     <View style={{backgroundColor:'#fff'}}>
+     <View style={{backgroundColor:'black'}}>
      <View style={{marginBottom:10}}>
 
      </View>
