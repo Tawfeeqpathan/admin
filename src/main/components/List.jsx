@@ -16,7 +16,7 @@ export const Lists = ({ listdata }) => {
         renderItem={({ item }) => (
           <TouchableOpacity style={[mystyle.item, mystyle.box]} key={item.id}>
             <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
-            <Text style={{ color: 'black', paddingLeft: 10 }}>{item.title}</Text>
+            <Text style={{ color: '#fff', paddingLeft: 10 }}>{item.title}</Text>
           </TouchableOpacity>
         )}
         keyExtractor={item => item.id}
@@ -34,7 +34,7 @@ const mystyle = StyleSheet.create({
     justifyContent: 'center'
   },
   text: {
-    color: 'black',
+    color: '#fff',
     fontSize: 20,
     fontWeight: 600
   },

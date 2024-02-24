@@ -20,7 +20,7 @@ export default function Home() {
     <Fitness />,
   ]
   return (
-    <SafeAreaView style={{ backgroundColor: '#fff', flex: 1 }}>
+    <SafeAreaView style={{ backgroundColor: 'black', flex: 1 }}>
       <FlashList
         data={componentsarr}
         renderItem={({ item }) => (
