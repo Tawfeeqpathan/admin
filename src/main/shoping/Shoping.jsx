@@ -60,7 +60,7 @@ export default function Shoping() {
                 <View style={[mystyle.box, { justifyContent:'flex-start', flexDirection: "row", marginTop: 20, marginLeft: 20 }]}>
                     <TouchableOpacity style={[mystyle.box, { flexDirection: 'row', gap: 6 }]}>
                         <Icon name="shopping-bag-1" size={25} color={"#fff"} />
-                        <Text style={[mystyle.text]}>Shoping</Text>
+                        <Text style={[mystyle.text]}>Shoping (Coming soon)</Text>
                     </TouchableOpacity>
                 </View>
                 <Lists listdata= {listdata}/>

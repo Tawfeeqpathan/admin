@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View,Dimensions } from 'react-native'
 import Search from '../components/Search'
 import FastImage from 'react-native-fast-image'
 import img from "../../../images/gym1.png"
@@ -8,6 +8,8 @@ import { ProductCarousel } from '../components/Carousel'
 import { FlashList } from '@shopify/flash-list'
 import Swiper from 'react-native-swiper';
 import { useNavigation } from '@react-navigation/native';
+const width =Dimensions.get('window').width;
+const height =Dimensions.get('window').height;
 export default function GymProducts() {
 
   return (
@@ -41,7 +43,12 @@ export default function GymProducts() {
        </View>
   
    
-        <View style={[{height:460,gap:10}]}>
+       
+      </View>
+      <View>
+
+      </View>
+      <View style={[{height:height-240,gap:1}]}>
         <FlashList
             data={[1, 2,3,4]}
             renderItem={({ item }) =><ProductList id={item} />}
@@ -50,10 +57,6 @@ export default function GymProducts() {
             numColumns={2}
           />
         </View>
-      </View>
-      <View>
-
-      </View>
     </SafeAreaView>
   )
 }
@@ -138,7 +141,7 @@ const mystyle = StyleSheet.create({
   },
   item: {
     marginTop:5,
-    width: 175,
+    width: width/2-5,
     height: 320,
     backgroundColor: '#fa8200',
   },

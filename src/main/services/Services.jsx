@@ -48,7 +48,7 @@ export default function Services() {
                 <View style={[mystyle.box, { justifyContent:'flex-start', flexDirection: "row", marginTop: 20, marginLeft: 20 }]}>
                     <TouchableOpacity style={[mystyle.box, { flexDirection: 'row', gap: 6 }]}>
                         <Icon name="customerservice" size={25} color={"#fff"} />
-                        <Text style={[mystyle.text]}>Services</Text>
+                        <Text style={[mystyle.text]}>Services (Coming soon)</Text>
                     </TouchableOpacity>
                 </View>
                 <Lists listdata={listdata}/>

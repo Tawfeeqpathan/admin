@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 import Swiper from 'react-native-swiper';
-import img1 from "../../../images/a1.png"
-import img2 from "../../../images/a2.png"
+import img1 from "../../../images/Home.png"
+import s1img from "../../../images/proteinslide.png"
+import s2img from "../../../images/Dietslide.png"
+import img2 from "../../../images/gymslide.png"
 import img3 from "../../../images/a3.png"
-import { HeadCarousel } from './OfferProductList';
+import { HeadCarousel, mystyle } from './OfferProductList';
 const Carousel = () => {
     const cData = [
         {
@@ -46,9 +48,13 @@ export const ProductCarousel = ()=>{
       dot={<View style={styles.dot} />}
       activeDot={<View style={styles.activeDot} />}
     > 
-<HeadCarousel />
-  <HeadCarousel/>
-  <HeadCarousel/>
+
+<View style={mystyle.box}>
+<Image source={s1img} style={{width:350,height:150}}/>
+</View>
+<View style={mystyle.box}>
+<Image source={s1img} style={{width:350,height:150}}/>
+</View>
     </Swiper>
   )
 }

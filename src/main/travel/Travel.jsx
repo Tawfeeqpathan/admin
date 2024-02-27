@@ -39,7 +39,7 @@ export default function Travel() {
                 <View style={[mystyle.box, { justifyContent:'flex-start', flexDirection: "row", marginTop: 20, marginLeft: 20 }]}>
                     <TouchableOpacity style={[mystyle.box, { flexDirection: 'row', gap: 6 }]}>
                         <Icon name="cab" size={25} color={"#fff"} />
-                        <Text style={[mystyle.text]}>Travel</Text>
+                        <Text style={[mystyle.text]}>Travel (Coming soon)</Text>
                     </TouchableOpacity>
                 </View>
                <Lists listdata={listdata}/>

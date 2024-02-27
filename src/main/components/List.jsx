@@ -9,7 +9,7 @@ export const Lists = ({ listdata }) => {
   if(title =="Gym"){
     navigation.navigate('gymproducts');
   }else{
-    alert("no")
+    alert("Coming soon")
   }
 
  }

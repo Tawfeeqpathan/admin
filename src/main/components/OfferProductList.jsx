@@ -3,49 +3,23 @@ import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image } from 'rea
 
 import { SafeAreaView } from 'react-native-safe-area-context'
 import mainimg from "../../../images/sumsung.png";
-import p1img from "../../../images/sum.png";
-import p2img from "../../../images/iphone.png";
-import tabimg from "../../../images/tab.png";
-import earimg from "../../../images/earbud.png";
+import p1img from "../../../images/proteinslide.png";
+import p2img from "../../../images/Dietslide.png";
 import { ProductCarousel } from './Carousel';
 import Search from './Search';
 const data = [
   {
     id: 1,
-    title: "I phone",
+    title: "Protein",
     price: 9999,
     image: p1img
   },
   {
     id: 2,
-    title: "Sumsung",
+    title: "Deit plan",
     price: 9999,
     image: p2img
   },
-  {
-    id: 3,
-    title: "Tablet",
-    price: 9999,
-    image: tabimg
-  },
-  {
-    id: 4,
-    title: "Earbus",
-    price: 9999,
-    image: earimg
-  },
-  {
-    id: 5,
-    title: "I phone",
-    price: 9999,
-    image: p2img
-  },
-  {
-    id: 6,
-    title: "Sumsung",
-    price: 9999,
-    image: p1img
-  }
 ]
 export const OfferProductList = ({ navigation }) => {
   return (
@@ -58,7 +32,7 @@ export const OfferProductList = ({ navigation }) => {
           <View>
             <ProductCarousel />
           </View>
-          <View style={mystyle.outerBox} >
+          <View style={[mystyle.outerBox]} >
             {
               data.map((item, index) => (
                 <View key={index} style={[mystyle.innerBox, mystyle.box]}>

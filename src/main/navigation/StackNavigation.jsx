@@ -1,4 +1,5 @@
 import IonIcon from 'react-native-vector-icons/dist/Ionicons';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import MaterialComIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -15,6 +16,7 @@ import Offer from '../offer/Offer';
 import ProductDetails from '../productDetails/ProductDetails';
 import GymProducts from '../fitness/GymProducts';
 import GymDetails from '../fitness/GymDetails';
+import Map from '../map/Map';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
@@ -48,13 +50,13 @@ export default function StackNavigation() {
                     }}
                 />
                 <Tab.Screen
-                    name='category'
-                    component={Category}
+                    name='map'
+                    component={Map}
                     options={{
-                        tabBarLabel: "Category",
+                        tabBarLabel: "Map",
                         tabBarLabelStyle: { fontSize: 13, },
                         headerShown: false,
-                        tabBarIcon: ({ focused }) => focused ? (<CategoryIcon />) : (<CategoryOutline />)
+                        tabBarIcon: ({ focused }) => focused ? (<Icon name={"map"} size={25}  color={"#fa8200"}/>) : (<Icon name={"map-o"} size={25}  color={"#fff"}/>)
                     }}
                 />
                 <Tab.Screen

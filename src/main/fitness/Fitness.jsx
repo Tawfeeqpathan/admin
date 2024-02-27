@@ -6,6 +6,7 @@ import gymimg from "../../../images/gym.png"
 import supimg from "../../../images/supplement.png"
 import deitimg from "../../../images/diets.png"
 import goalimg from "../../../images/goal.png"
+import dasimg from "../../../images/dashboard.png"
 import { Lists } from '../components/List';
 export default function Fitness() {
     const listdata = [
@@ -28,6 +29,11 @@ export default function Fitness() {
             id: 4,
             img:supimg,
             title: "Supple"
+        },
+        {
+            id: 5,
+            img:dasimg,
+            title: "Dahboard"
         },
       
        
