@@ -13,6 +13,8 @@ import { CategoryIcon, CategoryOutline } from './CategoryIcon';
 import Dashboard from '../dashboard/Dashboard';
 import Offer from '../offer/Offer';
 import ProductDetails from '../productDetails/ProductDetails';
+import GymProducts from '../fitness/GymProducts';
+import GymDetails from '../fitness/GymDetails';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
@@ -70,7 +72,7 @@ export default function StackNavigation() {
                     component={Wallet}
                     options={{
                         tabBarLabel: "Wallet",
-                        tabBarLabelStyle: { fontSize: 13, },
+                        tabBarLabelStyle: { fontSize: 13 },
                         headerShown: false,
                         tabBarIcon: ({ focused }) => focused ? (<MaterialComIcons name="wallet" size={35} color="#fa8200" />) : (<MaterialComIcons name="wallet-outline" size={35} color="#fff" />)
                     }}
@@ -81,10 +83,12 @@ export default function StackNavigation() {
     return (
         <NavigationContainer >
             <Stack.Navigator>
+            <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }} />
             <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
             <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
-         <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }} />
-         <Stack.Screen name="productdetails" component={ProductDetails} options={{ headerShown: false }} />
+            <Stack.Screen name='gymproducts' component={GymProducts} options={{ headerShown: false }} />
+            <Stack.Screen name="productdetails" component={ProductDetails} options={{ headerShown: false }} />
+            <Stack.Screen name="GymDetails" component={GymDetails} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

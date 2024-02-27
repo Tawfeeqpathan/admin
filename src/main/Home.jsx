@@ -13,11 +13,12 @@ export default function Home() {
   const componentsarr = [
     <Header />,
     <Carousel />,
+    <Fitness />,
     <Shoping />,
     <Food />,
     <Travel />,
     <Services />,
-    <Fitness />,
+   
   ]
   return (
     <SafeAreaView style={{ backgroundColor: 'black', flex: 1 }}>

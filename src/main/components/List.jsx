@@ -2,11 +2,18 @@ import React, { useState } from 'react';
 import { FlashList } from '@shopify/flash-list'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import FastImage from 'react-native-fast-image';
+import { useNavigation } from '@react-navigation/native';
 export const Lists = ({ listdata }) => {
-  const images = ({img})=>{
-    const imgUri = Image.resolveAssetSource(img).uri;
-    return imgUri
+  const navigation = useNavigation();
+ const pageHandel = (title)=>{
+  if(title =="Gym"){
+    navigation.navigate('gymproducts');
+  }else{
+    alert("no")
   }
+
+ }
+
   return (
     <View style={[mystyle.box, {
       height: 170,
@@ -19,7 +26,7 @@ export const Lists = ({ listdata }) => {
         data={listdata}
         horizontal={false}
         renderItem={({ item }) => (
-          <TouchableOpacity style={[mystyle.item, mystyle.box]} key={item.id}>
+          <TouchableOpacity style={[mystyle.item, mystyle.box]} key={item.id} onPress={()=>pageHandel(item.title)}>
             <FastImage source={{uri:Image.resolveAssetSource(item.img).uri,priority:FastImage.priority.high}} style={{ width: 50, height: 50, borderRadius: 50 }}  />
             <Text style={{ color: '#fff', paddingLeft: 10 }}>{item.title}</Text>
           </TouchableOpacity>

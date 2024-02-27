@@ -8,7 +8,6 @@ import earimg from "../../../images/earbud.png";
 import img1 from "../../../images/iphone.png";
 import img2 from "../../../images/sumsung.png";
 import img3 from "../../../images/tab.png";
-
 export default function ProductDetails() {
     const data = [
         {id:1,price:79900,img:img1},
