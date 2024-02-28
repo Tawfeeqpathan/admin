@@ -53,26 +53,6 @@ export const OfferProductList = ({ navigation }) => {
     </SafeAreaView>
   )
 }
-export const HeadCarousel = () => {
-  return (
-    <TouchableOpacity style={mystyle.box}>
-      <View style={[mystyle.box, mystyle.headbox]}>
-        <View style={[mystyle.headinfo, { marginLeft: 20, marginTop: 10 }]}>
-          <Text style={[mystyle.text, { fontWeight: 'bold', fontSize: 30 }]}>Just</Text>
-          <Text style={[mystyle.text, { fontWeight: 'bold' }]}>₹ 79,999</Text>
-          <Text style={[mystyle.text]}>Glaxy S24</Text>
-          <Text style={[{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold', fontSize: 15 }]}>+ 5% mj coin</Text>
-          <Text style={[mystyle.bottomText]}>Price inclusive of all offer</Text>
-        </View>
-        <View style={[mystyle.box]}>
-          <Text style={{ backgroundColor: '#fff', color: 'black', padding: 3, fontWeight: 'bold' }}>Sumsung</Text>
-          <Image source={mainimg} style={{ width: 160, height: 160 }} />
-        </View>
-
-      </View>
-    </TouchableOpacity>
-  )
-}
 export const mystyle = StyleSheet.create({
   title: {
     backgroundColor: 'rgba(0,0,0,0.6)',
